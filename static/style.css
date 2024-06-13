@@ -1,0 +1,33 @@
+/* static/style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+h2 {
+    color: #333;
+}
+form, table {
+    margin-top: 20px;
+}
+label {
+    display: block;
+    margin-top: 10px;
+}
+input, select {
+    margin-top: 5px;
+}
+button {
+    margin-top: 10px;
+    padding: 5px 10px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+table, th, td {
+    border: 1px solid #ddd;
+}
+th, td {
+    padding: 10px;
+    text
