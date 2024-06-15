@@ -1,37 +1,39 @@
-<!-- templates/view.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>EuroFootball Entries</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h2>Entries</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Country</th>
-                <th>Amount</th>
-                <th>Factor</th>
-                <th>Result</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for entry in entries %}
-            <tr>
-                <td>{{ entry[0] }}</td>
-                <td>{{ entry[1] }}</td>
-                <td>{{ entry[2] }}</td>
-                <td>{{ entry[3] }}</td>
-                <td>{{ entry[4] }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-    <a href="{{ url_for('index') }}">Back</a>
-    <br>
-    <a href="{{ url_for('login') }}"><button>Home</button></a>
+    <div class="container">
+        <img src="{{ url_for('static', filename='eurocup_logo.png') }}" alt="Eurocup Logo" style="width:100px;">
+        <h2>Entries</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Country</th>
+                    <th>Amount</th>
+                    <th>Factor</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for entry in entries %}
+                <tr>
+                    <td>{{ entry[0] }}</td>
+                    <td>{{ entry[1] }}</td>
+                    <td>{{ entry[2] }}</td>
+                    <td>{{ entry[3] }}</td>
+                    <td>{{ entry[4] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="{{ url_for('index') }}">Back</a>
+        <a href="{{ url_for('login') }}"><button class="home-button">Home</button></a>
+    </div>
 </body>
 </html>

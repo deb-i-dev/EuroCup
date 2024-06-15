@@ -9,7 +9,7 @@ countries = {
     "France": 1.8,
     "Germany": 1.7,
     "Spain": 1.6,
-    "Italy": 1.5,
+    "Italy": 1.9,
     "Portugal": 1.4
 }
 

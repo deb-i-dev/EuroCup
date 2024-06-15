@@ -1,32 +1,46 @@
-<!-- templates/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>EuroFootball</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h2>Welcome, {{ name }}!</h2>
-    <form method="POST" action="{{ url_for('submit') }}">
-        <input type="hidden" name="name" value="{{ name }}">
-        <label for="country">Select Country:</label>
-        <select id="country" name="country">
-            {% for country in countries %}
-            <option value="{{ country }}">{{ country }}</option>
-            {% endfor %}
-        </select>
-        <br>
-        <label for="amount">Amount:</label>
-        <select id="amount" name="amount">
-            <option value="100">100</option>
-            <option value="200">200</option>
-        </select>
-        <br>
-        <button type="submit">Submit</button>
-    </form>
-    <a href="{{ url_for('view') }}">View All Entries</a>
-    <br>
-    <a href="{{ url_for('login') }}"><button>Home</button></a>
+    <div class="container">
+        <img src="{{ url_for('static', filename='eurocup_logo.png') }}" alt="Eurocup Logo" style="width:100px;">
+        <h2>Welcome, {{ name }}!</h2>
+        <form method="POST" action="{{ url_for('submit') }}">
+            <input type="hidden" name="name" value="{{ name }}">
+            <label for="country">Select Country:</label>
+            <select id="country" name="country" onchange="updateFactor()">
+                {% for country in countries %}
+                <option value="{{ country }}">{{ country }}</option>
+                {% endfor %}
+            </select>
+            <label for="amount">Amount:</label>
+            <select id="amount" name="amount">
+                <option value="100">100</option>
+                <option value="200">200</option>
+            </select>
+            <label for="factor">Factor:</label>
+            <input type="text" id="factor" name="factor" readonly>
+            <button type="submit">Submit</button>
+        </form>
+        <a href="{{ url_for('view') }}">View All Entries</a>
+        <a href="{{ url_for('login') }}"><button class="home-button">Home</button></a>
+    </div>
+    <script>
+        const countries = {{ countries | tojson }};
+        function updateFactor() {
+            const countrySelect = document.getElementById('country');
+            const factorInput = document.getElementById('factor');
+            const selectedCountry = countrySelect.value;
+            factorInput.value = countries[selectedCountry];
+        }
+
+        // Initialize factor on page load
+        window.onload = updateFactor;
+    </script>
 </body>
 </html>
