@@ -6,11 +6,9 @@ app = Flask(__name__)
 
 # Define countries and their respective factors
 countries = {
-    "France": 1.8,
-    "Germany": 1.7,
-    "Spain": 1.6,
-    "Italy": 1.9,
-    "Portugal": 1.4
+    "Netherlands": 1.15,
+    "Poland": 4.5,
+    "Draw": 3.5,
 }
 
 # Default password
