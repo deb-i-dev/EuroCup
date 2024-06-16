@@ -77,9 +77,9 @@ def logout():
 @login_required
 def index():
     countries = {
-        "Netherlands": 1.15,
-        "Poland": 4.5,
-        "Draw": 3.5,
+        "Denmark": 1.15,
+        "Slovenia": 3.0,
+        "Draw": 2.5,
     }
     return render_template('index.html', name=current_user.username, countries=countries)
 
@@ -123,7 +123,6 @@ def view():
 def schedule():
     # Hardcoded schedule for demonstration
     schedule_data = [
-        {"date": "2024-06-16", "team1": "Netherlands", "team2": "Poland"},
         {"date": "2024-06-16", "team1": "Slovenia", "team2": "Denmark"},
         {"date": "2024-06-17", "team1": "Serbia", "team2": "England"},
         {"date": "2024-06-17", "team1": "Romania", "team2": "Ukraine"},
