@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04e2002c-5e5e-4cb4-9998-c9cd5ea643c7" name="Changes" comment="EuroApp v14.8- output.csv file deleted from data">
+    <list default="true" id="04e2002c-5e5e-4cb4-9998-c9cd5ea643c7" name="Changes" comment="EuroApp v14.9.2- Text &amp; factor changed for Denmark vs Slovenia match">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/submissions.csv" beforeDir="false" afterPath="$PROJECT_DIR$/submissions.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +143,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718541544221</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="EuroApp v14.9.2- Text &amp; factor changed for Denmark vs Slovenia match">
+      <option name="closed" value="true" />
+      <created>1718547586190</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1718547586190</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -151,6 +161,7 @@
     <MESSAGE value="EuroApp v11.8- text changes for Poland vs Netherland" />
     <MESSAGE value="EuroApp v14.2- code &amp; shedule updated for Poland vs Netherlands" />
     <MESSAGE value="EuroApp v14.8- output.csv file deleted from data" />
-    <option name="LAST_COMMIT_MESSAGE" value="EuroApp v14.8- output.csv file deleted from data" />
+    <MESSAGE value="EuroApp v14.9.2- Text &amp; factor changed for Denmark vs Slovenia match" />
+    <option name="LAST_COMMIT_MESSAGE" value="EuroApp v14.9.2- Text &amp; factor changed for Denmark vs Slovenia match" />
   </component>
 </project>
