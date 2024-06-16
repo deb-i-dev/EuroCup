@@ -71,6 +71,26 @@ a {
     margin-top: 20px;
 }
 
+/* Style for button group */
+.button-group {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.styled-button {
+    background-color: #e0e0e0;
+    color: #4c5db9;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.styled-button:hover {
+    background-color: #c7c7c7;
+}
+
 /* Add responsiveness */
 @media (max-width: 600px) {
     .container {
