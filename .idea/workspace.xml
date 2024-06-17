@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04e2002c-5e5e-4cb4-9998-c9cd5ea643c7" name="Changes" comment="EuroApp v14.8- output.csv file deleted from data">
+    <list default="true" id="04e2002c-5e5e-4cb4-9998-c9cd5ea643c7" name="Changes" comment="EuroApp v15- 2 match index page &amp; app page changed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/submissions.csv" beforeDir="false" afterPath="$PROJECT_DIR$/submissions.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +23,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
@@ -39,7 +46,7 @@
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;Python.app.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Eurov15&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/srili/PycharmProjects/EuroFootball/static&quot;
   }
 }</component>
@@ -141,7 +148,23 @@
       <option name="project" value="LOCAL" />
       <updated>1718541544221</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="EuroApp v14.9.2- Text &amp; factor changed for Denmark vs Slovenia match">
+      <option name="closed" value="true" />
+      <created>1718547586190</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1718547586190</updated>
+    </task>
+    <task id="LOCAL-00008" summary="EuroApp v15- 2 match index page &amp; app page changed">
+      <option name="closed" value="true" />
+      <created>1718573301511</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1718573301511</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -151,6 +174,8 @@
     <MESSAGE value="EuroApp v11.8- text changes for Poland vs Netherland" />
     <MESSAGE value="EuroApp v14.2- code &amp; shedule updated for Poland vs Netherlands" />
     <MESSAGE value="EuroApp v14.8- output.csv file deleted from data" />
-    <option name="LAST_COMMIT_MESSAGE" value="EuroApp v14.8- output.csv file deleted from data" />
+    <MESSAGE value="EuroApp v14.9.2- Text &amp; factor changed for Denmark vs Slovenia match" />
+    <MESSAGE value="EuroApp v15- 2 match index page &amp; app page changed" />
+    <option name="LAST_COMMIT_MESSAGE" value="EuroApp v15- 2 match index page &amp; app page changed" />
   </component>
 </project>
