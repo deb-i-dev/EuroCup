@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04e2002c-5e5e-4cb4-9998-c9cd5ea643c7" name="Changes" comment="EuroApp v11.8- text changes for Poland vs Netherland">
-      <change afterPath="$PROJECT_DIR$/templates/schedule.html" afterDir="false" />
+    <list default="true" id="04e2002c-5e5e-4cb4-9998-c9cd5ea643c7" name="Changes" comment="EuroApp v14.8- output.csv file deleted from data">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +125,23 @@
       <option name="project" value="LOCAL" />
       <updated>1718468419516</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="EuroApp v14.2- code &amp; shedule updated for Poland vs Netherlands">
+      <option name="closed" value="true" />
+      <created>1718532898753</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1718532898753</updated>
+    </task>
+    <task id="LOCAL-00006" summary="EuroApp v14.8- output.csv file deleted from data">
+      <option name="closed" value="true" />
+      <created>1718541544221</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1718541544221</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -137,6 +149,8 @@
     <MESSAGE value="EuroApp v11" />
     <MESSAGE value="EuroApp v11.1" />
     <MESSAGE value="EuroApp v11.8- text changes for Poland vs Netherland" />
-    <option name="LAST_COMMIT_MESSAGE" value="EuroApp v11.8- text changes for Poland vs Netherland" />
+    <MESSAGE value="EuroApp v14.2- code &amp; shedule updated for Poland vs Netherlands" />
+    <MESSAGE value="EuroApp v14.8- output.csv file deleted from data" />
+    <option name="LAST_COMMIT_MESSAGE" value="EuroApp v14.8- output.csv file deleted from data" />
   </component>
 </project>
