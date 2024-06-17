@@ -15,13 +15,15 @@
         <form action="{{ url_for('submit') }}" method="post">
             <label for="match1_country">Select Country for Match 1:</label>
             <select name="match1_country" id="match1_country">
-                <option value="Slovenia">Slovenia</option>
-                <option value="Denmark">Denmark</option>
+                <option value="Austria">Austria</option>
+                <option value="France">France</option>
+                <option value="Draw">Draw</option>
             </select>
             <label for="match1_factor">Factor:</label>
             <select name="match1_factor" id="match1_factor">
-                <option value="3.5">3.5</option>
-                <option value="1.5">1.5</option>
+                <option value="3.00">3.00</option>
+                <option value="1.30">1.30</option>
+                <option value="2.50">2.50</option>
             </select>
             <label for="match1_amount">Amount:</label>
             <select name="match1_amount" id="match1_amount">
@@ -34,13 +36,15 @@
         <form action="{{ url_for('submit') }}" method="post">
             <label for="match2_country">Select Country for Match 2:</label>
             <select name="match2_country" id="match2_country">
-                <option value="Serbia">Serbia</option>
-                <option value="England">England</option>
+                <option value="Belgium">Belgium</option>
+                <option value="Slovakia">Slovakia</option>
+                <option value="Draw">Draw</option>
             </select>
             <label for="match2_factor">Factor:</label>
             <select name="match2_factor" id="match2_factor">
-                <option value="4.0">4.0</option>
-                <option value="1.25">1.25</option>
+                <option value="1.20">1.20</option>
+                <option value="3.55">3.55</option>
+                <option value="3.00">3.00</option>
             </select>
             <label for="match2_amount">Amount:</label>
             <select name="match2_amount" id="match2_amount">
@@ -58,10 +62,12 @@
         document.getElementById('match1_country').addEventListener('change', function () {
             var country = this.value;
             var factorSelect = document.getElementById('match1_factor');
-            if (country === 'Slovenia') {
-                factorSelect.value = '3.5';
-            } else if (country === 'Denmark') {
-                factorSelect.value = '1.5';
+            if (country === 'Austria') {
+                factorSelect.value = '3.00';
+            } else if (country === 'France') {
+                factorSelect.value = '1.30';
+            } else if (country === 'Draw') {
+                factorSelect.value = '2.50';
             }
         });
 
@@ -69,10 +75,12 @@
         document.getElementById('match2_country').addEventListener('change', function () {
             var country = this.value;
             var factorSelect = document.getElementById('match2_factor');
-            if (country === 'Serbia') {
-                factorSelect.value = '4.0';
-            } else if (country === 'England') {
-                factorSelect.value = '1.25';
+            if (country === 'Belgium') {
+                factorSelect.value = '1.20';
+            } else if (country === 'Slovakia') {
+                factorSelect.value = '3.55';
+            } else if (country === 'Draw') {
+                factorSelect.value = '3.00';
             }
         });
     </script>
