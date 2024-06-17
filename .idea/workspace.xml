@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04e2002c-5e5e-4cb4-9998-c9cd5ea643c7" name="Changes" comment="EuroApp v15- 2 match index page &amp; app page changed">
+    <list default="true" id="04e2002c-5e5e-4cb4-9998-c9cd5ea643c7" name="Changes" comment="EuroApp v15- 3 match index page &amp; app page changed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/submissions.csv" beforeDir="false" afterPath="$PROJECT_DIR$/submissions.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/view.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/view.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +164,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718573301511</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="EuroApp v15- 3 match index page &amp; app page changed">
+      <option name="closed" value="true" />
+      <created>1718639031535</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1718639031535</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -176,6 +184,7 @@
     <MESSAGE value="EuroApp v14.8- output.csv file deleted from data" />
     <MESSAGE value="EuroApp v14.9.2- Text &amp; factor changed for Denmark vs Slovenia match" />
     <MESSAGE value="EuroApp v15- 2 match index page &amp; app page changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="EuroApp v15- 2 match index page &amp; app page changed" />
+    <MESSAGE value="EuroApp v15- 3 match index page &amp; app page changed" />
+    <option name="LAST_COMMIT_MESSAGE" value="EuroApp v15- 3 match index page &amp; app page changed" />
   </component>
 </project>

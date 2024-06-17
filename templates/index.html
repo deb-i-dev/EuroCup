@@ -36,15 +36,15 @@
         <form action="{{ url_for('submit') }}" method="post">
             <label for="match2_country">Select Country for Match 2:</label>
             <select name="match2_country" id="match2_country">
-                <option value="Belgium">Belgium</option>
-                <option value="Slovakia">Slovakia</option>
+                <option value="Turkiye">Turkiye</option>
+                <option value="Georgia">Georgia</option>
                 <option value="Draw">Draw</option>
             </select>
             <label for="match2_factor">Factor:</label>
             <select name="match2_factor" id="match2_factor">
-                <option value="1.20">1.20</option>
-                <option value="3.55">3.55</option>
-                <option value="3.00">3.00</option>
+                <option value="1.25">1.25</option>
+                <option value="3.15">3.15</option>
+                <option value="2.75">2.75</option>
             </select>
             <label for="match2_amount">Amount:</label>
             <select name="match2_amount" id="match2_amount">
@@ -75,12 +75,12 @@
         document.getElementById('match2_country').addEventListener('change', function () {
             var country = this.value;
             var factorSelect = document.getElementById('match2_factor');
-            if (country === 'Belgium') {
-                factorSelect.value = '1.20';
-            } else if (country === 'Slovakia') {
-                factorSelect.value = '3.55';
+            if (country === 'Turkiye') {
+                factorSelect.value = '1.25';
+            } else if (country === 'Georgia') {
+                factorSelect.value = '3.15';
             } else if (country === 'Draw') {
-                factorSelect.value = '3.00';
+                factorSelect.value = '2.75';
             }
         });
     </script>

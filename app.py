@@ -2,6 +2,8 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
 import csv
+from datetime import datetime
+import pytz
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
@@ -83,9 +85,9 @@ def index():
         "Draw": 2.50,
     }
     match2 = {
-        "Belgium": 1.20,
-        "Slovakia": 3.55,
-        "Draw": 3.00,
+        "Turkiye": 1.25,
+        "Georgia": 3.15,
+        "Draw": 2.75,
     }
     return render_template('index.html', name=current_user.username, match1=match1, match2=match2)
 
@@ -109,10 +111,14 @@ def submit():
     match_result = float(match_amount) * float(match_factor)
     match_rounded_result = round(match_result, 2)
 
+    # Get current time in IST
+    ist = pytz.timezone('Asia/Kolkata')
+    current_time = datetime.now(ist).strftime('%Y-%m-%d %H:%M:%S')
+
     # Save the submission to a CSV file
     with open('submissions.csv', 'a', newline='') as file:
         writer = csv.writer(file)
-        writer.writerow([name, match_country, match_amount, match_factor, match_rounded_result])
+        writer.writerow([name, match_country, match_amount, match_factor, match_rounded_result, current_time])
 
     flash(f'Your submission for {match_country} has been recorded!')
     return redirect(url_for('index'))
@@ -136,11 +142,11 @@ def view():
 def schedule():
     # Hardcoded schedule for demonstration
     schedule_data = [
-        {"date": "2024-06-16", "team1": "Netherlands", "team2": "Poland"},
-        {"date": "2024-06-16", "team1": "Slovenia", "team2": "Denmark"},
-        {"date": "2024-06-17", "team1": "Serbia", "team2": "England"},
-        {"date": "2024-06-17", "team1": "Romania", "team2": "Ukraine"},
-        {"date": "2024-06-17", "team1": "Belgium", "team2": "Slovakia"},
+        {"date": "2024-06-18", "team1": "Austria", "team2": "France"},
+        {"date": "2024-06-18", "team1": "Turkiye", "team2": "Georgia"},
+        {"date": "2024-06-19", "team1": "Portugal", "team2": "Czechia"},
+        {"date": "2024-06-19", "team1": "Croatia", "team2": "Albania"},
+        {"date": "2024-06-19", "team1": "Germany", "team2": "Hungary"},
         # Add more matches here
     ]
     return render_template('schedule.html', schedule_data=schedule_data)
