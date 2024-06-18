@@ -38,7 +38,7 @@ predefined_users = {
     "Suprabhat": User(id=13, username="Suprabhat", password=generate_password_hash("Suprabhatwd13")),
     "Supratim": User(id=14, username="Supratim", password=generate_password_hash("Supratimpd14")),
     "SRD": User(id=15, username="SRD", password=generate_password_hash("Epwd123")),
-    "Test11": User(id=16, username="Test11", password=generate_password_hash("password15")),
+    "Test12": User(id=16, username="Test12", password=generate_password_hash("p@ssword16")),
 }
 
 # Convert predefined_users to users dictionary
@@ -80,14 +80,14 @@ def logout():
 @login_required
 def index():
     match1 = {
-        "Czechia": 3.25,
-        "Portugal": 1.20,
-        "Draw": 2.95,
+        "Albania": 3.25,
+        "Croatia": 1.25,
+        "Draw": 2.85,
     }
     match2 = {
-        "Turkiye": 1.30,
-        "Georgia": 2.90,
-        "Draw": 2.75,
+        "Germany": 1.15,
+        "Hungary": 3.90,
+        "Draw": 3.05,
     }
     return render_template('index.html', name=current_user.username, match1=match1, match2=match2)
 

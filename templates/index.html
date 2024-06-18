@@ -15,16 +15,12 @@
         <form action="{{ url_for('submit') }}" method="post">
             <label for="match1_country">Select Country for Match 1:</label>
             <select name="match1_country" id="match1_country">
-                <option value="Czechia">Czechia</option>
-                <option value="Portugal">Portugal</option>
-                <option value="Draw">Draw</option>
+                {% for country, factor in match1.items() %}
+                <option value="{{ country }}" data-factor="{{ factor }}">{{ country }}</option>
+                {% endfor %}
             </select>
             <label for="match1_factor">Factor:</label>
-            <select name="match1_factor" id="match1_factor">
-                <option value="3.25">3.25</option>
-                <option value="1.20">1.20</option>
-                <option value="2.95">2.95</option>
-            </select>
+            <input type="text" name="match1_factor" id="match1_factor" readonly>
             <label for="match1_amount">Amount:</label>
             <select name="match1_amount" id="match1_amount">
                 <option value="100">100</option>
@@ -36,16 +32,12 @@
         <form action="{{ url_for('submit') }}" method="post">
             <label for="match2_country">Select Country for Match 2:</label>
             <select name="match2_country" id="match2_country">
-                <option value="Turkiye">Turkiye</option>
-                <option value="Georgia">Georgia</option>
-                <option value="Draw">Draw</option>
+                {% for country, factor in match2.items() %}
+                <option value="{{ country }}" data-factor="{{ factor }}">{{ country }}</option>
+                {% endfor %}
             </select>
             <label for="match2_factor">Factor:</label>
-            <select name="match2_factor" id="match2_factor">
-                <option value="1.30">1.30</option>
-                <option value="2.90">2.90</option>
-                <option value="2.75">2.75</option>
-            </select>
+            <input type="text" name="match2_factor" id="match2_factor" readonly>
             <label for="match2_amount">Amount:</label>
             <select name="match2_amount" id="match2_amount">
                 <option value="100">100</option>
@@ -61,27 +53,15 @@
         // Populate factor for match 1 based on selected country
         document.getElementById('match1_country').addEventListener('change', function () {
             var country = this.value;
-            var factorSelect = document.getElementById('match1_factor');
-            if (country === 'Czechia') {
-                factorSelect.value = '3.25';
-            } else if (country === 'Portugal') {
-                factorSelect.value = '1.20';
-            } else if (country === 'Draw') {
-                factorSelect.value = '2.95';
-            }
+            var factor = this.options[this.selectedIndex].getAttribute('data-factor');
+            document.getElementById('match1_factor').value = factor;
         });
 
         // Populate factor for match 2 based on selected country
         document.getElementById('match2_country').addEventListener('change', function () {
             var country = this.value;
-            var factorSelect = document.getElementById('match2_factor');
-            if (country === 'Turkiye') {
-                factorSelect.value = '1.30';
-            } else if (country === 'Georgia') {
-                factorSelect.value = '2.90';
-            } else if (country === 'Draw') {
-                factorSelect.value = '2.75';
-            }
+            var factor = this.options[this.selectedIndex].getAttribute('data-factor');
+            document.getElementById('match2_factor').value = factor;
         });
     </script>
 </body>
