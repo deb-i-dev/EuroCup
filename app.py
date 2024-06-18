@@ -80,13 +80,13 @@ def logout():
 @login_required
 def index():
     match1 = {
-        "Austria": 3.00,
-        "France": 1.30,
-        "Draw": 2.50,
+        "Czechia": 3.25,
+        "Portugal": 1.20,
+        "Draw": 2.95,
     }
     match2 = {
-        "Turkiye": 1.25,
-        "Georgia": 3.15,
+        "Turkiye": 1.30,
+        "Georgia": 2.90,
         "Draw": 2.75,
     }
     return render_template('index.html', name=current_user.username, match1=match1, match2=match2)
@@ -142,7 +142,7 @@ def view():
 def schedule():
     # Hardcoded schedule for demonstration
     schedule_data = [
-        {"date": "2024-06-18", "team1": "Austria", "team2": "France"},
+        {"date": "2024-06-20", "team1": "Scotland", "team2": "Switzerland"},
         {"date": "2024-06-18", "team1": "Turkiye", "team2": "Georgia"},
         {"date": "2024-06-19", "team1": "Portugal", "team2": "Czechia"},
         {"date": "2024-06-19", "team1": "Croatia", "team2": "Albania"},
