@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04e2002c-5e5e-4cb4-9998-c9cd5ea643c7" name="Changes" comment="EuroApp v15-6 timelog feature &amp; factor updated" />
+    <list default="true" id="04e2002c-5e5e-4cb4-9998-c9cd5ea643c7" name="Changes" comment="EuroApp v15-6 timelog feature &amp; factor updated">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -183,7 +185,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718724664816</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="EuroApp v15-6 timelog feature &amp; factor updated">
+      <option name="closed" value="true" />
+      <created>1718724704172</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1718724704172</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
