@@ -2,6 +2,8 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
 import csv
+from datetime import datetime
+import pytz
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
@@ -35,7 +37,8 @@ predefined_users = {
     "Sravan": User(id=12, username="Sravan", password=generate_password_hash("Sravanpwd12")),
     "Suprabhat": User(id=13, username="Suprabhat", password=generate_password_hash("Suprabhatwd13")),
     "Supratim": User(id=14, username="Supratim", password=generate_password_hash("Supratimpd14")),
-    "Test11": User(id=15, username="Test11", password=generate_password_hash("password15")),
+    "SRD": User(id=15, username="SRD", password=generate_password_hash("Epwd123")),
+    "Test11": User(id=16, username="Test11", password=generate_password_hash("password15")),
 }
 
 # Convert predefined_users to users dictionary
@@ -76,32 +79,48 @@ def logout():
 @app.route('/index')
 @login_required
 def index():
-    countries = {
-        "Denmark": 1.15,
-        "Slovenia": 3.0,
-        "Draw": 2.5,
+    match1 = {
+        "Czechia": 3.25,
+        "Portugal": 1.20,
+        "Draw": 2.95,
     }
-    return render_template('index.html', name=current_user.username, countries=countries)
+    match2 = {
+        "Turkiye": 1.30,
+        "Georgia": 2.90,
+        "Draw": 2.75,
+    }
+    return render_template('index.html', name=current_user.username, match1=match1, match2=match2)
 
 
 @app.route('/submit', methods=['POST'])
 @login_required
 def submit():
-    name = request.form['name']
-    country = request.form['country']
-    amount = request.form['amount']
-    factor = request.form['factor']
-    result = float(amount) * float(factor)
+    name = current_user.username
+    if 'submit_match1' in request.form:
+        match_country = request.form['match1_country']
+        match_amount = request.form['match1_amount']
+        match_factor = request.form['match1_factor']
+    elif 'submit_match2' in request.form:
+        match_country = request.form['match2_country']
+        match_amount = request.form['match2_amount']
+        match_factor = request.form['match2_factor']
+    else:
+        flash('Invalid submission.')
+        return redirect(url_for('index'))
 
-    # Round the result to 2 decimal places
-    rounded_result = round(result, 2)
+    match_result = float(match_amount) * float(match_factor)
+    match_rounded_result = round(match_result, 2)
+
+    # Get current time in IST
+    ist = pytz.timezone('Asia/Kolkata')
+    current_time = datetime.now(ist).strftime('%Y-%m-%d %H:%M:%S')
 
     # Save the submission to a CSV file
     with open('submissions.csv', 'a', newline='') as file:
         writer = csv.writer(file)
-        writer.writerow([name, country, amount, factor, rounded_result])
+        writer.writerow([name, match_country, match_amount, match_factor, match_rounded_result, current_time])
 
-    flash('Your submission has been recorded!')
+    flash(f'Your submission for {match_country} has been recorded!')
     return redirect(url_for('index'))
 
 
@@ -123,10 +142,11 @@ def view():
 def schedule():
     # Hardcoded schedule for demonstration
     schedule_data = [
-        {"date": "2024-06-16", "team1": "Slovenia", "team2": "Denmark"},
-        {"date": "2024-06-17", "team1": "Serbia", "team2": "England"},
-        {"date": "2024-06-17", "team1": "Romania", "team2": "Ukraine"},
-        {"date": "2024-06-17", "team1": "Belgium", "team2": "Slovakia"},
+        {"date": "2024-06-20", "team1": "Scotland", "team2": "Switzerland"},
+        {"date": "2024-06-18", "team1": "Turkiye", "team2": "Georgia"},
+        {"date": "2024-06-19", "team1": "Portugal", "team2": "Czechia"},
+        {"date": "2024-06-19", "team1": "Croatia", "team2": "Albania"},
+        {"date": "2024-06-19", "team1": "Germany", "team2": "Hungary"},
         # Add more matches here
     ]
     return render_template('schedule.html', schedule_data=schedule_data)

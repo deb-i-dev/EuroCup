@@ -1,51 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>EuroFootball</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Euro Cup</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
     <div class="container">
-        <img src="{{ url_for('static', filename='eurocup_logo.png') }}" alt="Eurocup Logo" style="width:100px;">
         <h2>Welcome, {{ name }}!</h2>
-
-        <form method="POST" action="{{ url_for('submit') }}">
-            <input type="hidden" name="name" value="{{ name }}">
-            <label for="country">Select Country:</label>
-            <select id="country" name="country" onchange="updateFactor()">
-                {% for country in countries %}
-                <option value="{{ country }}">{{ country }}</option>
-                {% endfor %}
+        <form action="{{ url_for('submit') }}" method="post">
+            <label for="match1_country">Select Country for Match 1:</label>
+            <select name="match1_country" id="match1_country">
+                <option value="Czechia">Czechia</option>
+                <option value="Portugal">Portugal</option>
+                <option value="Draw">Draw</option>
             </select>
-            <label for="amount">Amount:</label>
-            <select id="amount" name="amount">
+            <label for="match1_factor">Factor:</label>
+            <select name="match1_factor" id="match1_factor">
+                <option value="3.25">3.25</option>
+                <option value="1.20">1.20</option>
+                <option value="2.95">2.95</option>
+            </select>
+            <label for="match1_amount">Amount:</label>
+            <select name="match1_amount" id="match1_amount">
                 <option value="100">100</option>
                 <option value="200">200</option>
             </select>
-            <label for="factor">Factor:</label>
-            <input type="text" id="factor" name="factor" readonly>
-            <button type="submit">Submit</button>
+            <button type="submit" name="submit_match1">Submit Match 1</button>
         </form>
 
-        <div class="button-group">
-            <a href="{{ url_for('view') }}" class="styled-button">View All Entries</a>
-            <a href="{{ url_for('schedule') }}" class="styled-button">Schedule</a>
-            <a href="{{ url_for('logout') }}" class="styled-button">Logout</a>
-        </div>
+        <form action="{{ url_for('submit') }}" method="post">
+            <label for="match2_country">Select Country for Match 2:</label>
+            <select name="match2_country" id="match2_country">
+                <option value="Turkiye">Turkiye</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Draw">Draw</option>
+            </select>
+            <label for="match2_factor">Factor:</label>
+            <select name="match2_factor" id="match2_factor">
+                <option value="1.30">1.30</option>
+                <option value="2.90">2.90</option>
+                <option value="2.75">2.75</option>
+            </select>
+            <label for="match2_amount">Amount:</label>
+            <select name="match2_amount" id="match2_amount">
+                <option value="100">100</option>
+                <option value="200">200</option>
+            </select>
+            <button type="submit" name="submit_match2">Submit Match 2</button>
+        </form>
+        <a href="{{ url_for('schedule') }}" class="styled-button">View Schedule</a>
+        <a href="{{ url_for('view') }}" class="styled-button">View All Entries</a>
+        <a href="{{ url_for('logout') }}" class="styled-button">Logout</a>
     </div>
     <script>
-        const countries = {{ countries | tojson }};
-        function updateFactor() {
-            const countrySelect = document.getElementById('country');
-            const factorInput = document.getElementById('factor');
-            const selectedCountry = countrySelect.value;
-            factorInput.value = countries[selectedCountry];
-        }
+        // Populate factor for match 1 based on selected country
+        document.getElementById('match1_country').addEventListener('change', function () {
+            var country = this.value;
+            var factorSelect = document.getElementById('match1_factor');
+            if (country === 'Czechia') {
+                factorSelect.value = '3.25';
+            } else if (country === 'Portugal') {
+                factorSelect.value = '1.20';
+            } else if (country === 'Draw') {
+                factorSelect.value = '2.95';
+            }
+        });
 
-        // Initialize factor on page load
-        window.onload = updateFactor;
+        // Populate factor for match 2 based on selected country
+        document.getElementById('match2_country').addEventListener('change', function () {
+            var country = this.value;
+            var factorSelect = document.getElementById('match2_factor');
+            if (country === 'Turkiye') {
+                factorSelect.value = '1.30';
+            } else if (country === 'Georgia') {
+                factorSelect.value = '2.90';
+            } else if (country === 'Draw') {
+                factorSelect.value = '2.75';
+            }
+        });
     </script>
 </body>
+
 </html>
