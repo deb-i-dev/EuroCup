@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04e2002c-5e5e-4cb4-9998-c9cd5ea643c7" name="Changes" comment="EuroApp v16.3 updated for friday matched">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/submissions.csv" beforeDir="false" afterPath="$PROJECT_DIR$/submissions.csv" afterDir="false" />
-    </list>
+    <list default="true" id="04e2002c-5e5e-4cb4-9998-c9cd5ea643c7" name="Changes" comment="EuroApp v16.4 updated for Saturday matches" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -228,7 +224,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718982140198</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="EuroApp v16.4 updated for Saturday matches">
+      <option name="closed" value="true" />
+      <created>1719068605862</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1719068605862</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -269,6 +273,7 @@
     <MESSAGE value="EuroApp v15-7 recommit to master" />
     <MESSAGE value="EuroApp v16.1 javascript updated for one place country &amp; factor" />
     <MESSAGE value="EuroApp v16.3 updated for friday matched" />
-    <option name="LAST_COMMIT_MESSAGE" value="EuroApp v16.3 updated for friday matched" />
+    <MESSAGE value="EuroApp v16.4 updated for Saturday matches" />
+    <option name="LAST_COMMIT_MESSAGE" value="EuroApp v16.4 updated for Saturday matches" />
   </component>
 </project>
