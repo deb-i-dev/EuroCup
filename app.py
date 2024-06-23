@@ -80,14 +80,14 @@ def logout():
 @login_required
 def index():
     match1 = {
-        "Turkiye": 2.95,
-        "Portugal": 1.25,
-        "DrawTP": 2.40,
+        "Scotland": 1.80,
+        "Hungary": 1.65,
+        "DrawSH": 1.95,
     }
     match2 = {
-        "Romania": 3.10,
-        "Belgium": 1.20,
-        "DrawRB": 2.50,
+        "Switzerland": 3.05,
+        "Germany": 1.30,
+        "DrawSG": 2.80,
     }
     return render_template('index.html', name=current_user.username, match1=match1, match2=match2)
 
