@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04e2002c-5e5e-4cb4-9998-c9cd5ea643c7" name="Changes" comment="EuroApp v16.4 updated for Saturday matches">
+    <list default="true" id="04e2002c-5e5e-4cb4-9998-c9cd5ea643c7" name="Changes" comment="EuroApp v16.5 updated for Sunday matches">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
@@ -243,7 +243,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719069266347</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="EuroApp v16.5 updated for Sunday matches">
+      <option name="closed" value="true" />
+      <created>1719163219735</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1719163219735</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -285,6 +293,7 @@
     <MESSAGE value="EuroApp v16.1 javascript updated for one place country &amp; factor" />
     <MESSAGE value="EuroApp v16.3 updated for friday matched" />
     <MESSAGE value="EuroApp v16.4 updated for Saturday matches" />
-    <option name="LAST_COMMIT_MESSAGE" value="EuroApp v16.4 updated for Saturday matches" />
+    <MESSAGE value="EuroApp v16.5 updated for Sunday matches" />
+    <option name="LAST_COMMIT_MESSAGE" value="EuroApp v16.5 updated for Sunday matches" />
   </component>
 </project>
